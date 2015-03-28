@@ -44,6 +44,9 @@
             this.Next = new MetroFramework.Controls.MetroButton();
             this.Media = new MetroFramework.Controls.MetroTabPage();
             this.Settings = new MetroFramework.Controls.MetroTabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new MetroFramework.Controls.MetroLabel();
+            this.ChooseTheme = new MetroFramework.Controls.MetroComboBox();
             this.vl = new MetroFramework.Controls.MetroTrackBar();
             this.tabControl1.SuspendLayout();
             this.Player.SuspendLayout();
@@ -52,6 +55,8 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Volume)).BeginInit();
+            this.Settings.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -62,7 +67,7 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(20, 60);
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.SelectedIndex = 2;
             this.tabControl1.Size = new System.Drawing.Size(912, 497);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.UseSelectable = true;
@@ -246,6 +251,7 @@
             // 
             // Settings
             // 
+            this.Settings.Controls.Add(this.tableLayoutPanel4);
             this.Settings.HorizontalScrollbarBarColor = true;
             this.Settings.HorizontalScrollbarHighlightOnWheel = false;
             this.Settings.HorizontalScrollbarSize = 10;
@@ -257,6 +263,53 @@
             this.Settings.VerticalScrollbarBarColor = true;
             this.Settings.VerticalScrollbarHighlightOnWheel = false;
             this.Settings.VerticalScrollbarSize = 10;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.90265F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.09734F));
+            this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.ChooseTheme, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.813187F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.18681F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(904, 455);
+            this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.label1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Theme: ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.UseCustomForeColor = true;
+            // 
+            // ChooseTheme
+            // 
+            this.ChooseTheme.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChooseTheme.FormattingEnabled = true;
+            this.ChooseTheme.ItemHeight = 23;
+            this.ChooseTheme.Items.AddRange(new object[] {
+            "Light",
+            "Dark"});
+            this.ChooseTheme.Location = new System.Drawing.Point(200, 3);
+            this.ChooseTheme.Name = "ChooseTheme";
+            this.ChooseTheme.Size = new System.Drawing.Size(701, 29);
+            this.ChooseTheme.TabIndex = 1;
+            this.ChooseTheme.UseSelectable = true;
+            this.ChooseTheme.SelectedIndexChanged += new System.EventHandler(this.ChangeThemeEvent);
             // 
             // vl
             // 
@@ -274,7 +327,9 @@
             this.ClientSize = new System.Drawing.Size(952, 577);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
+            this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "VideoPlay";
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.tabControl1.ResumeLayout(false);
             this.Player.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -283,6 +338,9 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Volume)).EndInit();
+            this.Settings.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -306,6 +364,9 @@
         private MetroFramework.Controls.MetroButton Pause;
         private MetroFramework.Controls.MetroButton Play;
         private MetroFramework.Controls.MetroButton Next;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private MetroFramework.Controls.MetroLabel label1;
+        private MetroFramework.Controls.MetroComboBox ChooseTheme;
 
     }
 }
